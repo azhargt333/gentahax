@@ -1,0 +1,76 @@
+<style>
+    .card-wrap {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .card {
+        text-align: center;
+        margin-top: 30px;
+        padding: 20px;
+        background: white;
+        border-radius: 15px;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        transition: 0.25s ease;
+        animation: fadeIn 0.8s ease forwards;
+        opacity: 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(0, 255, 170, 0.6);
+    }
+
+    .card img {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .card p {
+        margin-top: 12px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    /* Animasi Fade-In */
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(20px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* Efek Glow Animasi */
+    .card::after {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(0,255,200,0.3), transparent 60%);
+        animation: pulse 3s infinite;
+        pointer-events: none;
+    }
+
+    @keyframes pulse {
+        0% {transform: scale(1);}
+        50% {transform: scale(1.15);}
+        100% {transform: scale(1);}
+    }
+</style>
+
+<!-- Link WhatsApp (ganti nomor kalau mau) -->
+<a href="https://wa.me/6285757894251" class="card-wrap">
+
+<div class="card">
+    <img src="gambar.png" alt="gambar">
+
+    <p>by: azhar</p>
+</div>
+
+</a>
